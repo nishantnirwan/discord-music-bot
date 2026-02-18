@@ -1,0 +1,39 @@
+require('dotenv').config();
+const { REST, Routes } = require('discord.js');
+const { readdirSync } = require('fs');
+const path = require('path');
+
+const commands = [];
+const commandsPath = path.join(__dirname, 'commands');
+const files = readdirSync(commandsPath).filter((f) => f.endsWith('.js') && !f.startsWith('_'));
+
+for (const file of files) {
+  const cmd = require(path.join(commandsPath, file));
+  if (cmd?.data) {
+    commands.push(cmd.data.toJSON());
+    console.log(`  Registered: /${cmd.data.name}`);
+  }
+}
+
+const rest = new REST({ version: '10' }).setToken(process.env.DISCORD_TOKEN);
+
+(async () => {
+  try {
+    console.log(`\nDeploying ${commands.length} slash commands...`);
+
+    if (process.env.GUILD_ID) {
+      // Guild-specific (instant update, great for testing)
+      await rest.put(
+        Routes.applicationGuildCommands(process.env.CLIENT_ID, process.env.GUILD_ID),
+        { body: commands }
+      );
+      console.log(`✅ Commands deployed to guild ${process.env.GUILD_ID} (instant).`);
+    } else {
+      // Global (takes up to 1 hour to propagate)
+      await rest.put(Routes.applicationCommands(process.env.CLIENT_ID), { body: commands });
+      console.log('✅ Commands deployed globally (may take up to 1 hour).');
+    }
+  } catch (err) {
+    console.error('❌ Deployment failed:', err);
+  }
+})();
