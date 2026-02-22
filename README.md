@@ -9,7 +9,7 @@
 <img src="https://img.shields.io/badge/version-5.0.0-blue?style=for-the-badge" />
 
 **A powerful, self-hosted Discord music bot with slash commands, text prefix support,
-and per-server customization — powered by yt-dlp for reliable YouTube streaming.**
+and per-server customization - powered by yt-dlp for reliable YouTube streaming.**
 
 [Features](#-features) · [Requirements](#-requirements) · [Installation](#-installation) · [Configuration](#-configuration) · [Commands](#-commands) · [Contributing](#-contributing)
 
@@ -19,19 +19,19 @@ and per-server customization — powered by yt-dlp for reliable YouTube streamin
 
 ## ✨ Features
 
-- 🎶 **YouTube streaming** via yt-dlp — reliable, always up to date
-- 🔍 **Search by name or URL** — paste a YouTube link or just type a song name
-- 📋 **Playlist support** — queue entire YouTube playlists instantly
-- 🔁 **Loop modes** — loop a single track or the entire queue
-- 🔀 **Shuffle** — randomize your queue at any time
-- 🔊 **Volume control** — per-server volume adjustment (0–100)
-- ⏭️ **Skip to position** — jump directly to any track in the queue
-- 💬 **Dual command system** — both slash commands (`/play`) and text prefix (`!play`)
-- 🏷️ **Custom prefix** — each server can set their own prefix
-- 🔒 **Admin-only prefix change** — requires Manage Server permission
-- 📌 **Now Playing embeds** — rich embeds with title, author, thumbnail and controls
-- 🎛️ **Button controls** — pause, skip, stop, shuffle via interactive buttons
-- 🕐 **24/7 mode** — keep the bot in voice channel even when queue ends
+- 🎶 **YouTube streaming** via yt-dlp - reliable, always up to date
+- 🔍 **Search by name or URL** - paste a YouTube link or just type a song name
+- 📋 **Playlist support** - queue entire YouTube playlists instantly
+- 🔁 **Loop modes** - loop a single track or the entire queue
+- 🔀 **Shuffle** - randomize your queue at any time
+- 🔊 **Volume control** - per-server volume adjustment (0–100)
+- ⏭️ **Skip to position** - jump directly to any track in the queue
+- 💬 **Dual command system** - both slash commands (`/play`) and text prefix (`!play`)
+- 🏷️ **Custom prefix** - each server can set their own prefix
+- 🔒 **Admin-only prefix change** - requires Manage Server permission
+- 📌 **Now Playing embeds** - rich embeds with title, author, thumbnail and controls
+- 🎛️ **Button controls** - pause, skip, stop, shuffle via interactive buttons
+- 🕐 **24/7 mode** - keep the bot in voice channel even when queue ends
 
 ---
 
@@ -42,7 +42,7 @@ and per-server customization — powered by yt-dlp for reliable YouTube streamin
 | [Node.js](https://nodejs.org/) | 18.0.0 or higher |
 | [Python](https://python.org/) | 3.7 or higher |
 | [yt-dlp](https://github.com/yt-dlp/yt-dlp) | Latest |
-| A Discord Bot Token | — |
+| A Discord Bot Token | - |
 
 ---
 
@@ -164,7 +164,7 @@ All commands work as both **slash commands** (`/play`) and **text prefix command
 | `/autoplay` | Toggle autoplay mode |
 | `/247` | Toggle 24/7 mode (stay in VC) |
 
-### ⚙️ Settings *(Admin only — requires Manage Server)*
+### ⚙️ Settings *(Admin only - requires Manage Server)*
 
 | Command | Description |
 |---|---|
@@ -269,7 +269,7 @@ Contributions, issues and feature requests are welcome!
 
 ## 📄 License
 
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
 ---
 
